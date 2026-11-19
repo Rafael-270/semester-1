@@ -14,6 +14,9 @@ class Point:
         self.y = y_coordinate
     # Add distance() method here
     def distance(self):
+        """
+        Calculates distance of the point from the origin
+        """
         return math.hypot(self.x, self.y)
 
     # Add distance_to() method here

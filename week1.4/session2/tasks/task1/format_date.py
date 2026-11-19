@@ -8,6 +8,9 @@
 
 def format_data(day, month, year, separator = "-"):
     # complete your code here
+    """
+    writes the given date in a specified format
+    """
     formatted_date = day + separator + month + separator + year
     return formatted_date
 

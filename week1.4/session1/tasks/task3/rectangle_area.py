@@ -2,6 +2,9 @@
 # function implementation
 
 def rectangle_area(width, height ):  # define suitable input data
+    """
+    calculate the area of the inputted rectangle
+    """
     area = width * height              # implement the function
     return area             # return an appropriate value
 
