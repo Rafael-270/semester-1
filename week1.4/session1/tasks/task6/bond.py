@@ -11,6 +11,12 @@ def isBond(intList):
     otherwise. The numbers do not need to be consecutive, but must appear
     in the specified order.
     """
+    for i in range(len(intList) - 2):
+        if intList[i-1] == 0 and intList[i] == 0 and intList[i+1] == 7:
+            return True
+    return False
+             
+
 
     # pass is a Python keyword used as a placeholder for future code,
     # meaning you need to delete pass to write your code.

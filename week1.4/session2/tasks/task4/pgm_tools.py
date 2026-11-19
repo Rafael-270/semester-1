@@ -26,7 +26,14 @@ def writePGM( filename, image ):
     Input: filename string, image tuple data
     Output: None
     '''
+    
+
     width,height,max_gray,pixels = image  # unpack the tuple
+    with open(filename,"w") as file:
+        file.write("P2\n")
+        file.write(width + " " + height + "\n")
+        file.write(max_gray + "\n")
+        file.write(pixels)
 
     # open a file for writing
     # write the data in PGM format
@@ -54,5 +61,11 @@ image = readPGM("images/feep.pgm")
 
 print(f"Image with width {image[0]} and height {image[1]}")
 print(f"{image[3]}")
-
+writePGM("images/test.pgm", ("24","7","15","""0 0  0  0  0  0  0  0  0 0  0  0  0  0  0  0  0 0  0  0  0  0  0  0
+0 3  3  3  3  0  0  7  7 7  7  0  0 11 11 11 11 0  0 15 15 15 15  0
+0 3  0  0  0  0  0  7  0 0  0  0  0 11  0  0  0 0  0 15  0  0 15  0
+0 3  3  3  0  0  0  7  7 7  0  0  0 11 11 11  0 0  0 15 15 15 15  0
+0 3  0  0  0  0  0  7  0 0  0  0  0 11  0  0  0 0  0 15  0  0  0  0
+0 3  0  0  0  0  0  7  7 7  7  0  0 11 11 11 11 0  0 15  0  0  0  0
+0 0  0  0  0  0  0  0  0 0  0  0  0  0  0  0  0 0  0  0  0  0  0  0"""))
 # write further code to test your own functions

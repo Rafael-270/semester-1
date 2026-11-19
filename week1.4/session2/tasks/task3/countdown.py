@@ -16,6 +16,15 @@ def countdown(n):
 
     # Complete your code here
     # base case
+    loop = True
+    while loop == True:
+        if n == 0:
+            print(n)
+            loop = False
+        else:
+            print(n)
+            n = n - 1
+    return
 
     # recursive case
 
