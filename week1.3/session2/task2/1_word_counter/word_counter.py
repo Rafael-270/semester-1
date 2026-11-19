@@ -15,3 +15,9 @@
 # story.txt - 290
 # story2.txt - 326
 # glasses.txt - 210
+word_count = input("Enter file name to count words in ")
+with open(word_count, "r") as file:
+    data = file.read()
+    words = data.split()
+    count = len(words)
+    print(count)
